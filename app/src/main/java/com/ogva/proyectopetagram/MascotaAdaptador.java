@@ -37,11 +37,11 @@ public class MascotaAdaptador extends androidx.recyclerview.widget.RecyclerView.
             @Override
             public void onClick(View v) {
                 if(!mascota.isFavorito()) {
-                    Toast.makeText(activity, "SI es favorito", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(activity, "Favorito", Toast.LENGTH_SHORT).show();
                     holder.imgHuesoFavorito.setImageResource(R.drawable.hueso_plomo);
                     mascota.setFavorito(true);
                 } else {
-                    Toast.makeText(activity, "NO es favorito" + mascota.getNombre(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(activity, "NO Favorito" + mascota.getNombre(), Toast.LENGTH_SHORT).show();
                     holder.imgHuesoFavorito.setImageResource(R.drawable.hueso_azul);
                     mascota.setFavorito(false);
                 }
