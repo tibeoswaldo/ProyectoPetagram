@@ -11,7 +11,10 @@ import android.os.Parcelable;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
@@ -19,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayList<Mascota> mascotas;
     private RecyclerView listaMascotas;
+    LinearLayoutManager llm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,14 +32,25 @@ public class MainActivity extends AppCompatActivity {
         androidx.appcompat.widget.Toolbar miActionBar = findViewById(R.id.miActionBar);
         setSupportActionBar(miActionBar);
 
+        FloatingActionButton fab = findViewById(R.id.floatingActionButton);
+
         listaMascotas = findViewById(R.id.rvMascotas);
 
-        LinearLayoutManager llm = new LinearLayoutManager(this);
+        llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         listaMascotas.setLayoutManager(llm);
 
         inicializarListaMascotas();
         inicializarAdaptador();
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //listaMascotas.scrollToPosition(0);
+                //llm.smoothScrollToPosition(listaMascotas, new RecyclerView.State(), 0);
+                Toast.makeText(MainActivity.this,"Moviendo al principaio", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     public void inicializarListaMascotas() {

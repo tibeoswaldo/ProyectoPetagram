@@ -28,5 +28,12 @@
             />
     </androidx.core.widget.NestedScrollView>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:src="@drawable/ic_baseline_camera_alt_24"
+        app:backgroundTint="#FF5722" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
