@@ -12,5 +12,5 @@ _El segundo activity mostrara las priemras 5 mascotas favoritas_
 
 _Capturas de Pantalla:_
 
-![imagen1](https://github.com/tibeoswaldo/ProyectoPetagram/blob/master/img/image2.jpeg)
+![imagen1](https://github.com/tibeoswaldo/ProyectoPetagram/blob/master/img/image0.jpeg)
 ![imagen2](https://github.com/tibeoswaldo/ProyectoPetagram/blob/master/img/image1.jpeg)
